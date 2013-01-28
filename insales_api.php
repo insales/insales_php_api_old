@@ -91,6 +91,6 @@
 			parent::__construct($info['response_headers']['http_status_message'], $info['response_headers']['http_status_code']);
 		}
 
-		function getInfo() { $this->info; }
+		function getInfo() { return $this->info; }
 	}
 ?>
