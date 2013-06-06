@@ -7,7 +7,7 @@
 		return function ($method, $path, $params=array(), &$response_headers=array()) use ($baseurl)
 		{
 			$url = $baseurl.ltrim($path, '/');
-			$payload = in_array($method, array('POST','PUT')) ? stripslashes(json_encode($params)) : array();
+			$payload = in_array($method, array('POST','PUT')) ? json_encode($params) : array();
 			$request_headers = in_array($method, array('POST','PUT')) ? array("Content-Type: application/json; charset=utf-8", 'Expect:') : array();
 
 			$response = curl_http_api_request_($method, $url, $payload, $request_headers, $response_headers);
