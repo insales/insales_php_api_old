@@ -37,10 +37,10 @@ PHP библиотека для работы с InsalesApi [insales.ru](http://w
 		/* $e->getInfo() вернет массив со следующими ключами:
 			* method
 			* path
-			* params (third parameter passed to $shopify)
+			* params (third parameter passed to $insales_api)
 			* response_headers
 			* response
-			* shops_myshopify_domain
+			* shops_myinsales_domain
 			* shops_token
 		*/
 	}
